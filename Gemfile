@@ -30,5 +30,4 @@ group :development do
   gem "web-console", ">= 4.1.0"
 end
 
-
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
