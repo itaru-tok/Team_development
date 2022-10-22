@@ -28,3 +28,13 @@ end
 CSV.foreach("db/csv_data/movie_data.csv", headers: true) do |row|
   Movie.create!(row.to_h)
 end
+
+# 管理者
+admin_email = "admin@example.com"
+admin_password = password
+
+# 管理者が存在しないときだけ作成
+AdminUser.find_or_create_by!(email: admin_email) do |admin_user|
+  admin_user.password = admin_password
+  puts "管理者の初期データインポートに成功しました。"
+end
