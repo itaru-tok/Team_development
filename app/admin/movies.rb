@@ -27,7 +27,7 @@ ActiveAdmin.register Movie do
     f.semantic_errors
     f.inputs do
       # enum-help を利用
-      input :genre, as: :select, collection: Text.genres_i18n.invert
+      input :genre, as: :select, collection: Movie.genres_i18n.invert
       input :title
       input :url
     end
