@@ -1,13 +1,9 @@
-<% (Movie::RAILS_GENRE_LIST).select do |element| %>
-  <% if movie.genre.include?(element) %>
-    <div class="col">
-      <div class="card">
-        <iframe src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="card-body">
-          <a href="#" class="btn btn-primary btn-block">読破済みにする</a>
-          <p class="card-title">Lv.<%= movie_counter + 1 %>：<%= movie.title%></p>
-        </div>
-      </div>
+<div class="col">
+  <div class="card">
+    <iframe src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="card-body">
+      <a href="#" class="btn btn-primary btn-block">読破済みにする</a>
+      <p class="card-title">Lv.<%= movie_counter + 1 %>：<%= movie.title%></p>
     </div>
-  <% end %>
-<% end %>
+  </div>
+</div>
