@@ -4,7 +4,8 @@ module Users
       # ゲストアカウントでログイン
       sign_in User.guest
       # トップページへリダイレクト
-      redirect_to root_path, notice: t(".notice")
+      flash[:success] = t(".notice")
+      redirect_to root_path
     end
   end
 end
