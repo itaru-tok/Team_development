@@ -14,5 +14,10 @@ class Movie < ApplicationRecord
     php: 5
   }
 
+  def php?
+    params[:genre] == "php"
+  end
+
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+  PHP = %w[php].freeze
 end
