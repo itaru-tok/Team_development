@@ -8,4 +8,8 @@ module ApplicationHelper
       "mw-xl"
     end
   end
+
+  def title(genre)
+    "#{genre} 動画"
+  end
 end

@@ -2,10 +2,10 @@ class MoviesController < ApplicationController
   def index
     if params[:genre] == "php"
       @movies = Movie.PHP
-      @title = "PHP 動画"
+      @genre = "PHP"
     else
       @movies = Movie.RAILS_GENRE_LIST
-      @title = "Ruby/Rails 動画"
+      @genre = "Ruby/Rails"
     end
   end
 end
