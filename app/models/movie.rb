@@ -18,6 +18,10 @@ class Movie < ApplicationRecord
     params[:genre] == "php"
   end
 
+  def self.RAILS_GENRE_LIST
+    where(genre: "basic", "git", "ruby", "rails")
+  end
+
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
   PHP = %w[php].freeze
 end
