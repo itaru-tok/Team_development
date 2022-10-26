@@ -14,11 +14,11 @@ class Movie < ApplicationRecord
     php: 5
   }
 
-  def self.PHP
+  def self.php
     where(genre: ["php"])
   end
 
-  def self.RAILS_GENRE_LIST
+  def self.rails_genre_list
     where(genre: ["basic", "git", "ruby", "rails"])
   end
 end
