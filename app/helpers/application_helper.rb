@@ -9,7 +9,11 @@ module ApplicationHelper
     end
   end
 
-  def title(genre)
-    "#{genre} 動画"
+  def title
+    if params[:genre] == "php"
+      "PHP動画"
+    else
+      "Ruby/Rails動画"
+    end
   end
 end
