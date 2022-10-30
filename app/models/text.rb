@@ -1,4 +1,6 @@
 class Text < ApplicationRecord
+  has_many :readprogress, dependant: :destroy
+
   with_options presence: true do
     validates :genre
     validates :title
