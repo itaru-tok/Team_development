@@ -2,7 +2,7 @@
   <div class="card text-item">
     <%= image_tag("default_image.jpg")  %>
     <div class="card-body">
-      <p>
+      <p id="text-<%= text.id %>">
         <% if text.read_progressed_by?(current_user) %>
           <%= render "read_progress", text: text %>
         <% else %>
