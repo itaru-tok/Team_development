@@ -44,3 +44,8 @@ body {
 .alert-alert {
   @extend .alert-danger;
 }
+
+/* ページネーション */
+.pagination {
+  justify-content: center;
+}
