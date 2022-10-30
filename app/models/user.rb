@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :texts, dependent: :destroy
   has_many :read_progresses, dependent: :destroy
+  has_many :texts, dependent: :destroy, through: :read_progresses
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
