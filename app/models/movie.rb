@@ -7,6 +7,10 @@ class Movie < ApplicationRecord
     validates :url
   end
 
+  def watched_by?(user)
+    watch_progresses.exists?(user_id: user.id)
+  end
+
   enum genre: {
     invisible: 0,
     basic: 1,
