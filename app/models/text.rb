@@ -1,4 +1,5 @@
 class Text < ApplicationRecord
+  belongs_to :user
   has_many :read_progresses, dependent: :destroy
 
   with_options presence: true do

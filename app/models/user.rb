@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :texts, dependent: :destroy
   has_many :read_progresses, dependent: :destroy
 
   # Include default devise modules. Others available are:
