@@ -2,6 +2,11 @@
   <div class="card text-item">
     <%= image_tag("default_image.jpg")  %>
     <div class="card-body">
+      <% if text.read_progressed_by?(current_user) %>
+        済み
+      <% else %>
+        済みにする
+      <% end %>
       <a href="#" class="btn btn-secondary text-list__button">読破済みにする</a>
       <p class="text-list__title"><%= text.title %></p>
       <p>【<%= text.genre %>】</p>
