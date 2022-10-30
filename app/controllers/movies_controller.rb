@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.where(genre: Movie::RAILS_GENRE_LIST)
+    @movies = Movie.select_by_genre(params[:genre])
   end
 end
