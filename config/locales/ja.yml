@@ -25,10 +25,10 @@ ja:
       read_progress:
         user: ユーザー
         user_id: ユーザー
-        text: テキスト
+        text: テキスト教材
     errors:
       models:
         read_progress:
           attributes:
             user_id:
-              duplicated: は同じテキストに複数回の読破済みはできません
+              duplicated: は同じテキスト教材に2回以上読破済みはできません
