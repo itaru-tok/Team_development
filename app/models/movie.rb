@@ -1,6 +1,6 @@
 class Movie < ApplicationRecord
   has_many :watch_progresses, dependent: :destroy
-  has_many :watched_users, through: :watch_progresses, source: :user
+  has_many :user, through: :watch_progresses
   with_options presence: true do
     validates :genre
     validates :title
@@ -8,7 +8,7 @@ class Movie < ApplicationRecord
   end
 
   def watched_by?(user)
-    watch_progresses.exists?(user_id: user.id)
+    watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }
   end
 
   enum genre: {
