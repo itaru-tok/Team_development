@@ -1,6 +1,6 @@
 class Text < ApplicationRecord
   has_many :read_progresses, dependent: :destroy
-  has_many :user, through: :read_progresses
+  has_many :users, through: :read_progresses
 
   with_options presence: true do
     validates :genre
