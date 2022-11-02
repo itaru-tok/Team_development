@@ -2,7 +2,13 @@
   <div class="card text-item">
     <%= image_tag("default_image.jpg")  %>
     <div class="card-body">
-      <a href="#" class="btn btn-secondary text-list__button">読破済みにする</a>
+      <p id="text-<%= text.id %>">
+        <% if text.read_progressed_by?(current_user) %>
+          <%= render "read_progress", text: text %>
+        <% else %>
+          <%= render "unread_progress", text: text %>
+        <% end %>
+      </p>
       <p class="text-list__title"><%= text.title %></p>
       <p>【<%= text.genre %>】</p>
     </div>
