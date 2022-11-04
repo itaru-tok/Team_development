@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root "texts#index"
-  
+
   resources :texts do
     resource :read_progresses, only: [:create, :destroy]
   end
