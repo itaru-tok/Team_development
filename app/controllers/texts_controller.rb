@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.includes(:users, :read_progresses).where(genre: Text::RAILS_GENRE_LIST)
+    @texts = Text.select_by_genre(params[:genre]).includes(:users, :read_progresses)
   end
 
   def show; end
