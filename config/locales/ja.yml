@@ -32,3 +32,11 @@ ja:
           attributes:
             user_id:
               duplicated: は同じテキスト教材に2回以上読破済みはできません
+    errors:
+      models:
+        watch_progress:
+          attributes:
+            user_id:
+              duplicated: 'は同じ動画教材を2回以上視聴済みにはできません'
+
+

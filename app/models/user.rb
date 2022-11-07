@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :watch_progresses, dependent: :destroy
   has_many :read_progresses, dependent: :destroy
   has_many :texts, through: :read_progresses
 

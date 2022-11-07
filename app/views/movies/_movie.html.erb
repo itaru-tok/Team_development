@@ -1,9 +1,13 @@
 <div class="col-lg-4 col-md-6 col-movie">
   <div class="card card-movie">
     <iframe src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="card-body">
-      <a href="#" class="btn btn-primary btn-block">読破済みにする</a>
-      <p class="card-movie-title">Lv.<%= movie_counter + @movies.offset_value + 1 %>：<%= movie.title%></p>
+    <div id="movie-<%= movie.id %>" class="card-body">
+      <% if movie.watched_by?(current_user) %>
+        <%= render "finished", movie: movie %>
+      <% else %>
+        <%= render "unfinish", movie: movie %>
+      <% end %>
+      <p class="card-movie-title">Lv.<%= movie_counter + 1 %>：<%= movie.title%></p>
     </div>
   </div>
 </div>
