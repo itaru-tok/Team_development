@@ -3,5 +3,7 @@ class TextsController < ApplicationController
     @texts = Text.select_by_genre(params[:genre]).includes(:users, :read_progresses)
   end
 
-  def show; end
+  def show
+    @text = Text.find(params[:id])
+  end
 end
