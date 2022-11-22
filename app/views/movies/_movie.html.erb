@@ -9,7 +9,7 @@
           <%= render "unfinish", movie: movie %>
         <% end %>
       </p>
-      <p class="card-movie-title">Lv.<%= movie_counter + 1 %>：<%= movie.title%></p>
+      <p class="card-movie-title">Lv.<%= @movies.offset_value + movie_counter + 1 %>：<%= movie.title%></p>
     </div>
   </div>
 </div>
