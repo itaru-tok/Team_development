@@ -8,7 +8,7 @@ https://sample-team-project-y.herokuapp.com/users/sign_in
 
 ### 開発環境
 
-- Ruby 2.7.3
+- Ruby 2.7.6
 - Rails 6.1.x.x (詳細なパージョンはGemfileで指定)
 - PostgreSQL
 

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand" href=http://localhost:3000>
+    <%= image_tag ("yanbaru_expert_logo.png") %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav">
+      <li class="navbar-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ruby
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to "Ruby/Railsテキスト教材", texts_path, class: "dropdown-item" %>
+          <%= link_to "Ruby/Rails動画教材", movies_path, class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PHP
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to "PHPテキスト教材", texts_path(genre: "php"), class: "dropdown-item" %>
+          <%= link_to "PHP動画教材", movies_path(genre: "php"), class: "dropdown-item" %>
+        </div>
+      </li>
+      <% if user_signed_in? %>
+        <%# ログイン時%>
+        <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link text-white" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: "nav-item nav-link text-white" %>
+      <% else %>
+        <%# 非ログイン時%>
+        <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link text-white" %>
+        <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link text-white" %>
+        <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "nav-item nav-link text-white" %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
