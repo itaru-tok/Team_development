@@ -1,10 +1,8 @@
-## （チーム開発）やんばるエキスパート教材 クローンアプリ開発
+## （チーム開発）やんばるエキスパート クローンアプリ開発
 
-### クローン元の URL
+### サイト URL
 
-https://sample-team-project-y.herokuapp.com/users/sign_in
-
-元のアプリから細かい機能を削ったこちらのアプリを目標に開発を進めていただきます。
+https://team-project-64.herokuapp.com/users/sign_in
 
 ### 開発環境
 
